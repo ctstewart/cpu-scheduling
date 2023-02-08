@@ -1,4 +1,4 @@
-package SJFAlgorithm
+package sjfalgorithm
 
 import (
 	"fmt"
@@ -12,7 +12,7 @@ type process struct {
 	burst int
 }
 
-func SJFAlgorithm() {
+func Algorithm() {
 	var processes []process
 	for i := 0; i < 5; i++ {
 		p := process{i, fmt.Sprintf("P%d", i+1), rand.Intn(9) + 1}
