@@ -3,7 +3,7 @@ package main
 import (
 	"time"
 
-	"github.com/ctstewart/cpu-scheduling/internal/pkg/SJFAlgorithm"
+	"github.com/ctstewart/cpu-scheduling/internal/pkg/sjfalgorithm"
 
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/widget"
@@ -18,7 +18,7 @@ import (
 func main() {
 	createUI()
 
-	SJFAlgorithm.SJFAlgorithm()
+	sjfalgorithm.Algorithm()
 	// var processes []process
 	// for i := 0; i < 5; i++ {
 	// 	p := process{i, fmt.Sprintf("P%d", i+1), rand.Intn(9) + 1}
