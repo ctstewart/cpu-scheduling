@@ -1,4 +1,4 @@
-package sjfAlgorithm
+package SJFAlgorithm
 
 import (
 	"fmt"
