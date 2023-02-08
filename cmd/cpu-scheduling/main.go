@@ -12,7 +12,7 @@ import (
 // }
 
 func main() {
-	UI.UI()
+	UI.Display()
 
 	algorithms.SJF()
 }

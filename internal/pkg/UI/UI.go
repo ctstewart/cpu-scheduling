@@ -1,31 +1,22 @@
 package UI
 
 import (
-	"time"
+	"image/color"
 
 	"fyne.io/fyne/v2/app"
-	"fyne.io/fyne/v2/widget"
+	"fyne.io/fyne/v2/canvas"
+	"fyne.io/fyne/v2/container"
+	"fyne.io/fyne/v2/layout"
 )
 
-func UI() {
-	a := app.New()
-	w := a.NewWindow("Clock")
+func Display() {
+	myApp := app.New()
+	myWindow := myApp.NewWindow("Grid Layout")
 
-	clock := widget.NewLabel("")
-	updateTime(clock)
-	w.SetContent(clock)
-
-	// Make the clock update every tick
-	go func() {
-		for range time.Tick(time.Second) {
-			updateTime(clock)
-		}
-	}()
-
-	w.ShowAndRun()
-}
-
-func updateTime(clock *widget.Label) {
-	formattedTime := time.Now().Format("The time is 03:04:05")
-	clock.SetText(formattedTime)
+	text1 := canvas.NewText("1", color.White)
+	text2 := canvas.NewText("2", color.White)
+	text3 := canvas.NewText("3", color.White)
+	grid := container.New(layout.NewGridLayout(2), text1, text2, text3)
+	myWindow.SetContent(grid)
+	myWindow.ShowAndRun()
 }
