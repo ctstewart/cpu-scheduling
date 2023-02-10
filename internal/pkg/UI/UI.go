@@ -19,7 +19,6 @@ func Display() {
 	grid := container.New(layout.NewGridLayout(3))
 	form := form(grid)
 	grid.Add(form)
-	grid.Add(table([][]string{{"Hello"}}))
 
 	w.SetContent(grid)
 	w.ShowAndRun()
